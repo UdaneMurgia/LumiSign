@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcripción en Tiempo Real</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Transcripción en Tiempo Real de Lengua de Señas</h1>
+        <a href="panel_estudiante.html" class="back-link">← Volver a la Página Principal</a>
+    </header>
+
+    <main>
+<section id="sign-transcription">
+    <h2>Transcripción Automática</h2>
+    <p id="transcription-text">Esperando transcripción de lengua de señas...</p>
+    
+    <button class="boton-transcripcion" onclick="startTranscription()">Iniciar Transcripción</button>
+
+    <div id="video-container">
+        <video id="video1" src="IMG_5686 2.mp4" muted></video>
+        <video id="video2" src="ZumoNaranja.mp4" muted></video>
+        <video id="video3" src="Duracion.mp4" muted></video>
+        <video id="video4" src="Desayuno.mp4" muted></video>
+    </div>
+
+    <textarea id="texto" placeholder="El texto se mostrará aquí..." readonly></textarea>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plataforma Inclusiva. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="implementacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumiSign - Selección de Idioma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ======== SELECCIÓN DE IDIOMA ======== -->
+    <div id="language-screen">
+        <div class="logo-container">
+            <img src="WhatsApp Image 2025-10-20 at 14.27.57.png" alt="Logo LumiSign" class="language-logo">
+        </div>
+        <h1>Selecciona tu idioma / Select your language</h1>
+        <select id="language-select">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="zh">官话</option>
+            <option value="pt">Português</option>
+        </select>
+        <button id="language-button">Continuar</button>
+    </div>
+
+    <!-- ======== PANTALLA DE CARGA ======== -->
+    <div id="loading-screen">
+        <img src="Captura_de_pantalla_2025-10-20_a_las_16.19.13-removebg-preview.png" alt="Logo LumiSign" id="loading-logo">
+        <div class="spinner"></div>
+        <p>Cargando LumiSign...</p>
+    </div>
+
+    <!-- ======== CONTENIDO PRINCIPAL ======== -->
+    <div id="main-content">
+        <header>
+            <h1 id="title">Bienvenido a LumiSign</h1>
+        </header>
+
+        <main>
+             <div class="logo-container">
+            <img src="ChatGPT Image 20 oct 2025, 13_21_56.png" alt="Logo LumiSign" class="main-image">
+        </div>
+            <section class="opciones">
+                <div class="opcion">
+                    <h2 id="student-area">Área de Usuario</h2>
+                    <p id="student-text">Regístrate o inicia sesión para comenzar a aprender</p>
+                    <div class="button-container">
+                        <button class="elegant-button" id="register-btn" onclick="document.getElementById('registro').style.display='block'">Registrarse</button>
+                        <button class="elegant-button" id="login-btn" onclick="document.getElementById('inicio-sesion').style.display='block'">Iniciar sesión</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulario de Registro -->
+            <div id="registro" class="registro" style="display: none;">
+                <h2 id="register-title">Registro de Usuario</h2>
+                <form onsubmit="registrarEstudiante(event)">
+                    <label for="nombre" id="label-name">Nombre:</label>
+                    <input type="text" id="nombre" required>
+
+                    <label for="apellidos" id="label-surname">Apellidos:</label>
+                    <input type="text" id="apellidos" required>
+
+                    <label for="email" id="label-email">Correo Electrónico:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="contrasena" id="label-pass">Contraseña:</label>
+                    <input type="password" id="contrasena" required>
+
+                    <label for="confirmar-contrasena" id="label-pass2">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmar-contrasena" required>
+
+                    <button type="submit" id="register-btn2">Registrarse</button>
+                    <button type="button" onclick="document.getElementById('registro').style.display='none'">Cancelar</button>
+                </form>
+            </div>
+
+            <!-- Formulario de Inicio de Sesión -->
+            <div id="inicio-sesion" class="registro" style="display: none;">
+                <h2 id="login-title">Iniciar Sesión</h2>
+                <form onsubmit="event.preventDefault(); verificarInicioSesion();">
+                    <label for="email-sesion" id="label-login-email">Correo Electrónico:</label>
+                    <input type="email" id="email-sesion" required>
+
+                    <label for="contrasena-sesion" id="label-login-pass">Contraseña:</label>
+                    <input type="password" id="contrasena-sesion" required>
+
+                    <button type="submit" id="login-btn2">Iniciar Sesión</button>
+                    <button type="button" onclick="document.getElementById('inicio-sesion').style.display='none'">Cancelar</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p id="footer-text">&copy; 2024 LumiSign. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+<!-- ======= Centro de Asistencia ======= -->
+<div id="asistencia-btn" class="hidden">💬 ¿Tienes un problema?</div>
+
+<div id="asistencia-modal" class="hidden">
+  <div class="asistencia-content">
+    <h2>Centro de Asistencia</h2>
+    <p>Cuéntanos qué problema estás teniendo:</p>
+    <textarea id="asistencia-texto" placeholder="Describe el problema..."></textarea>
+    <div class="asistencia-actions">
+      <button id="enviar-asistencia">Enviar</button>
+      <button id="cerrar-asistencia">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<script src="traduccionIdioma.js"></script>
+<script src="Asistencia.js"></script>
+<script src="registroInicio.js"></script>
+<script src="loading.js"></script>
+</body>
+</html>

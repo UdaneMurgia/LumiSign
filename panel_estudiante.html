@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LumiSign - Panel del Usuario</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="panelUsuario.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1 id="panel-title">Panel del Usuario</h1>
+    </div>
+    <div class="user-menu">
+      <button id="user-button">👤 Mario Pérez Santos ▾</button>
+      <ul id="user-dropdown" class="hidden">
+        <li id="change-lang">Cambiar idioma</li>
+        <li id="edit-info">Editar información</li>
+        <li id="dark-mode-toggle">Modo oscuro</li>
+        <li id="logout">Cerrar sesión</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-info">
+      <h2 id="nombre"></h2>
+      <p id="email"></p>
+    </section>
+
+    <section class="content-section">
+      <h2 id="features-title">Características Interactivas</h2>
+      <ul class="button-container">
+        <li><a href="transcripcion.html" class="elegant-button" id="btn-transcripcion">Transcripción en tiempo real</a></li>
+        <li><a href="conversion_señas.html" class="elegant-button" id="btn-conversion">Lenguaje de señas a texto/voz</a></li>
+        <li><a href="video.html" class="elegant-button" id="btn-video">Subir video de lenguaje de señas</a></li>
+        <li><a href="lecturaDeTexto.html" class="elegant-button" id="btn-lectura">Lectura de texto</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text">&copy; 2024 LumiSign. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
